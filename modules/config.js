@@ -18,10 +18,10 @@ export const CONFIG = {
      *  In the standalone Python-only build the static-file server (e.g.
      *  python3 -m http.server 8000) and the WebTransport server run on
      *  different ports, so this is hardcoded to the aioquic server's port. */
-    wtPort: 4433,
+    wtPort: 8443,
 
     /** WebTransport URL — HTTP/3 is TLS-only, so this is always https://. */
-    wtUrl: `https://${location.hostname || 'localhost'}:4433/wt?role=browser`,
+    wtUrl: `https://${location.hostname || 'localhost'}:8443/wt?role=browser`,
 
     /** Default command transport: 'webrtc' | 'websocket' | 'webtransport'.
      *  Overridden on load by the relay's /status (--type) when available. */

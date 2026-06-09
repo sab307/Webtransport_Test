@@ -21,7 +21,7 @@ where the data would have gone.
 Usage:
   python3 client.py                                       # role=observer, /cmd_vel
   python3 client.py --topic /robot1/cmd_vel
-  python3 client.py --url https://localhost:4433/wt --insecure
+  python3 client.py --url https://localhost:8443/wt --insecure
   python3 client.py --role browser                        # connect as browser
 """
 
@@ -261,7 +261,7 @@ async def main(url: str, role: str, topic: str,
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
-    p.add_argument("--url",   default="https://localhost:4433/wt")
+    p.add_argument("--url",   default="https://localhost:8443/wt")
     p.add_argument("--role",  default="observer", choices=("observer", "browser"))
     p.add_argument("--topic", default="/cmd_vel",
                    help="ROS 2 topic to publish received twists on "

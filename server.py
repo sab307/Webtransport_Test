@@ -45,7 +45,7 @@ from twist_protocol import (
 )
 
 BIND_ADDRESS = "::"
-BIND_PORT = 4433
+BIND_PORT = 8443
 
 logger = logging.getLogger("wt-teleop")
 
