@@ -6,8 +6,8 @@ Speaks the Twist / Ack / SyncReq / SyncResp protocol expected by the dashboard
 frontend in this folder (see twist_protocol.py for wire format).
 
 Endpoint:
-  https://<host>:4433/wt?role=browser    twist source — gets Ack + SyncResp back
-  https://<host>:4433/wt?role=observer   read-only sink — receives every twist
+  https://<host>:8443/wt?role=browser    twist source — gets Ack + SyncResp back
+  https://<host>:8443/wt?role=observer   read-only sink — receives every twist
                                           the server processes (as datagram)
 
 Both binary CRC-8 frames and JSON envelopes are accepted; the server replies in
