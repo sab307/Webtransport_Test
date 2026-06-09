@@ -14,30 +14,30 @@
  *   connection.js  – WebRTC signaling + DataChannel lifecycle
  */
 
-import { CONFIG } from './modules/config.js';
-import { state, handlers } from './modules/state.js';
+import { CONFIG } from '../modules/config.js';
+import { state, handlers } from '../modules/state.js';
 import {
     FIELD_LINEAR_X,  FIELD_LINEAR_Y,  FIELD_LINEAR_Z,
     FIELD_ANGULAR_X, FIELD_ANGULAR_Y, FIELD_ANGULAR_Z,
     now,
-} from './modules/protocol.js';
+} from '../modules/protocol.js';
 import { encodeTwist, decodeAck, decodeSyncResp,
-         frameSize } from './modules/codec.js';
+         frameSize } from '../modules/codec.js';
 import { pushLog, downloadLog, clearLog,
-         logInfo, logWarn, logError, logSend } from './modules/logger.js';
+         logInfo, logWarn, logError, logSend } from '../modules/logger.js';
 import { initChart, updateChart, resetZoom,
-         setChartActive }             from './modules/chart.js';
+         setChartActive }             from '../modules/chart.js';
 import { updateControlDisplay, updateCrcDisplay,
          updateMetrics, updateBreakdown, updateTimestamps,
          setupSpeedControl, setupFieldSelector,
          setupPrecisionToggle,
          setupInputModeSelector,
          setupRoutingSelectors,
-         setupFormatSelector } from './modules/ui.js';
-import { setupKeyboard, setupJoystick } from './modules/controls.js';
-import { setupSteering, drawWheel }   from './modules/steering.js';
+         setupFormatSelector } from '../modules/ui.js';
+import { setupKeyboard, setupJoystick } from '../modules/controls.js';
+import { setupSteering, drawWheel }   from '../modules/steering.js';
 import { connect, disconnect,
-         sendSyncReq, stopSending }   from './modules/connection.js';
+         sendSyncReq, stopSending }   from '../modules/connection.js';
 
 // ── Twist send timer ──────────────────────────────────────────────────────────
 
