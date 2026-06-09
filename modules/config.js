@@ -21,7 +21,7 @@ export const CONFIG = {
     wtPort: 8443,
 
     /** WebTransport URL — HTTP/3 is TLS-only, so this is always https://. */
-    wtUrl: `https://${location.hostname || 'localhost'}:8443/wt?role=browser`,
+    wtUrl: `https://${imiq-occ.et.uni-magdeburg.de || 'localhost'}:8443/wt?role=browser`,
 
     /** Default command transport: 'webrtc' | 'websocket' | 'webtransport'.
      *  Overridden on load by the relay's /status (--type) when available. */
